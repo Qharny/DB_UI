@@ -30,7 +30,7 @@ This is an online Bookshop application built with MongoDB as the backend databas
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/online-bookshop.git
+    git clone https://github.com/tormgibbs/Online-BookStore-API.git
     ```
 
 2. Install dependencies:
