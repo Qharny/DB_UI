@@ -1,4 +1,4 @@
-# Online Bookshop
+# Online Bookstore
 
 This is an online Bookshop application built with MongoDB as the backend database.
 
@@ -36,7 +36,7 @@ This is an online Bookshop application built with MongoDB as the backend databas
 2. Install dependencies:
 
     ```bash
-    cd online-bookshop
+    cd online-bookstore
     npm install
     ```
 
@@ -51,7 +51,7 @@ This is an online Bookshop application built with MongoDB as the backend databas
     npm start
     ```
 
-5. Open your browser and visit `http://localhost:3000` to access the online Bookshop.
+5. Open your browser and visit `http://localhost:3000` to access the online Bookstore.
 
 ## Contributing
 
