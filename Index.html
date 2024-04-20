@@ -4,22 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/vendor/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <title>Document</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>BookShopify</title>
 </head>
-<body>
-    <!-- Creating UI for Online Bookshop-->
+<body oncontextmenu="false" >
+    <!-- pre loader -->
+    <!-- <div class="loader-container">
+        <img draggable="false" src="./assets/images/preloader.gif" alt="">
+    </div> -->
+
     <header>
         <nav>
-            <div class="logo"></div>
+            <div class="logo">BookShopify</div>
             <div class="search">
-                <input type="search" name="" id="" title="Search">
+                <input type="search" name="" id="" title="Search" placeholder="search here...">
+                <button onclick="search" title="search">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
         </nav>
-        <div class="icons"></div>
+        <div class="icons">
+            <!-- favorite-->
+            <i class="fas fa-heart"></i>
+            <!-- cart -->
+            <i class="fas fa-shopping-cart"></i>
+            <!-- profile -->
+            <i class="fas fa-user"></i>
+        </div>
     </header>
     <!-- Navbar -->
     <div class="navbar">
@@ -41,7 +59,6 @@
             <button>Explore</button>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="hero image">
         </div>
     </section>
     <!-- End of Hero Section -->
