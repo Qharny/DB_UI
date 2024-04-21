@@ -23,7 +23,7 @@ html, body{
     --background-dark-color: #10121A;
     --background-dark-grey: #191d28;
     --border-color: #2e344e;
-    --background-light-color: #f1f1f1;
+    --background-light-color: #665b5bca;
     --background-light-color-2: #037fff4d;
     --white-color: #fff;
     --font-light-color: #a4acc4;
@@ -170,7 +170,42 @@ header{
 }
 
 /* Main Section*/
-/* Genre Section */
-hr{
+
+/* catalogue section */
+h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 2rem 0;
+}
+.catalogue{
+    display: grid;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    place-content: center;
+    height: 90vh;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem
+}
+.cat-container{
+    display: flex;
+    overflow-x: hidden;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    gap: 1rem;
+
+    .cat-card{
+        box-shadow: 1px 1px 5px #0000007d;
+        padding: 5px;
+        height: 200px;
+        width: 180px;
+        border-radius: 5px;
+        background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+        display: grid;
+        place-items: center;
+        justify-content: space-evenly;
+        transition: transform 0.5s ease-in-out;
+    }
 }
