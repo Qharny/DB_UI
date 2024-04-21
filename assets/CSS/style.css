@@ -17,7 +17,7 @@ html, body{
 }
 
 :root{
-    --primary-color: #0dae04;
+    --primary-color: #022e21;
     --secondary-color: #df2b1b;
     --tetiary-color: #239ef0;
     --background-dark-color: #10121A;
@@ -167,4 +167,10 @@ header{
 }
 .hero .hero-content button:hover{
     transform: translateY(-1px);
+}
+
+/* Main Section*/
+/* Genre Section */
+hr{
+    width: 100%;
 }
