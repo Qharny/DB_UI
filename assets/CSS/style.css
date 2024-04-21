@@ -50,32 +50,43 @@ header{
     font-size: 24px;
     font-weight: 600;
 
+    .logo{
+        cursor: pointer;
+        color: var(--font-dark-color);
+    }
+    .logo i{
+        color: var(--primary-color);
+    }
+
     input[type="search"]{
-        height: 30px;
+        width: 200px;
+        height: 40px;
+        position: relative;
         border: none;
+        border-radius: 10px;
         border-bottom: 1px solid var(--font-light-color);
-        /* box-shadow: 1px 1px 5px #000; */
+        border-right: 1px solid var(--font-light-color);
     }
     input[type="search"]::placeholder{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        padding: 5px 10px;
     }
-    input[type="search"]::placeholder::before{
-        content: 'Search here...';
-        color: var(--font-light-color);
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 1px;
-
+    input[type="search"]:hover{
+        box-shadow: 0.1px 0.1px 5px #00000068;
+        transform: translateY(-1px);
     }
-    input[type="search"]::placeholder::after{
-        content: '';
-        color: var(--font-light-color);
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 1px;
 
+    .icons{
+       i{
+        margin-left: 10px;
+        color: var(--font-dark-color);
+        cursor: pointer;
+        transition: 0.3s ease-out;
+       }
+       i:hover{
+        color: var(--primary-color);
+       }
     }
 }
 .navbar{
