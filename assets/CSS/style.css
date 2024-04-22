@@ -14,6 +14,7 @@ html, body{
     background-attachment: fixed;
     background-size: cover;
     transition: 0.3s all;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -120,7 +121,6 @@ header{
     flex-wrap: wrap;
     gap: 1.5rem;
     min-height: 80vh;
-    
 }
 /* .hero::before {
     content: "";
@@ -179,15 +179,7 @@ h2{
     margin: 2rem 0;
 }
 .catalogue{
-    display: grid;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    place-content: center;
-    height: 90vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin: 3rem
 }
 .cat-container{
     display: flex;
@@ -200,12 +192,43 @@ h2{
         box-shadow: 1px 1px 5px #0000007d;
         padding: 5px;
         height: 200px;
-        width: 180px;
+        width: 200px;
         border-radius: 5px;
         background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
         display: grid;
         place-items: center;
         justify-content: space-evenly;
-        transition: transform 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+
+        button{
+            display: none;
+            position: absolute;
+            background: var(--primary-color);
+            border-radius: 5%;
+            color: var(--white-color);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            box-shadow: 1px 1px 5px black;
+        }
+
     }
+    .cat-card:hover{
+        background: #00000085;
+        button{
+            display: block ;
+        }
+    }
+
+}
+a#view{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 3rem 3rem 0;
+    color: var(--font-dark-color-2);
+    font-weight: 600;
+    font-size: 18px;
 }
