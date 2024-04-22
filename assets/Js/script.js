@@ -1,3 +1,21 @@
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Select the loader container
+    const loaderContainer = document.querySelector(".loader-container");
+    const htmlBody = document.querySelector(".wrapper");
+
+    // Show the loader when the DOM is fully loaded
+    loaderContainer.style.display = "block";
+    htmlBody.style.display = "none"
+
+    // Hide the loader once the page has fully loaded
+    window.addEventListener("load", function() {
+        loaderContainer.style.display = "none";
+        htmlBody.style.display = "block"
+    });
+});
+
+
 // the navbar scrolling effect.
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.NavBar');
