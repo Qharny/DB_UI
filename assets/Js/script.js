@@ -1,3 +1,4 @@
+// the navbar scrolling effect.
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.getBoundingClientRect().height;
@@ -14,3 +15,5 @@ window.addEventListener('scroll', function() {
         document.body.style.paddingTop = '0';
     }
 });
+
+// the sliding effect in the catalogue section.
