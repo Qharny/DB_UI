@@ -19,6 +19,13 @@
     <!-- JavaScript Files -->
     <script src="./assets/Js/script.js" defer></script>
 
+
+    <!-- Vendor CSS Files -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
     <title>BookShopify</title>
 </head>
 
@@ -50,7 +57,7 @@
         </div>
     </header>
     <!-- Navbar -->
-    <div class="navbar">
+    <div class="NavBar">
         <ul>
             <li><a href="#" title="home">Home</a></li>
             <li><a href="#cat" title="Catalogue">Catalogue</a></li>
@@ -75,56 +82,83 @@
     </section>
     <!-- End of Hero Section -->
     <main id="main" class="main">
-        <section class="catalogue" id="catalogue">
+        <!-- ======= Catalogue Section ======= -->
+    <section id="catalogue" class="catalogue section-bg">
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-title">
             <h2>Catalogue</h2>
-            <div class="cat-container">
-                <div class="cat-card">
-                    <img src="./assets/images/genre1.jpg" alt="Fiction">
-                    <h3>Fiction</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+          </div>
+
+          <div class="catalogue-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre2.jpg" alt="Non-Fiction">
-                    <h3>Non-Fiction</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+              </div><!-- End cat item -->
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre3.jpg" alt="Sci-fi">
-                    <h3>Sci-fi</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+              </div><!-- End cat item -->
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre4.jpg" alt="Biography">
-                    <h3>Biography</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+              </div><!-- End cat item -->
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre4.jpg" alt="Biography">
-                    <h3>Biography</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+              </div><!-- End cat item -->
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre4.jpg" alt="Biography">
-                    <h3>Biography</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
+              </div><!-- End cat item -->
+
+              <div class="swiper-slide">
+                <div class="cat-item">
+                    <img src="" alt="book">
+                    <h4>Fiction</h4>
+                    <p>₵120 <small><strike>₵200</strike></small></p>
+                    <button type="button">View all</button>
                 </div>
-                <div class="cat-card">
-                    <img src="./assets/images/genre4.jpg" alt="Biography">
-                    <h3>Biography</h3>
-                    <h4>₵200.00</h4>
-                    <button type="button">Add to cart</button>
-                </div>
+              </div><!-- End cat item -->
+
+  
             </div>
-            <a href="#" id="view" >View all <i class="fas fa-right-arrow"></i> </a>
-        </section>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </section><!-- End catalogue Section -->
         <section class="arrival" id="arrival">
-            <h2>New Arrivals</h2>
+            <div class="section-title">
+                <h2>New Arrival</h2>
+              </div>
+
             <div class="container">
                 <div class="cards">
                     <img src="" alt="book">
