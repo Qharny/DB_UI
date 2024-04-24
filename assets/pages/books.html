@@ -20,6 +20,7 @@
 
     <!-- JavaScript Files -->
     <script src="../Js/script.js" defer></script>
+    <script src="../Js/bookscript.js" defer></script>
 
 
     <!-- Vendor CSS Files -->
@@ -35,12 +36,15 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 10px;
+            margin-top: 2rem;
         }
 
         .card {
             background-color: #f0f0f0;
-            padding: 20px;
+            height: 300px;
             text-align: center;
+            display: grid;
+            place-items: center;
         }
     </style>
 
@@ -55,9 +59,7 @@
         </div>
         <div class="search">
             <input type="search" name="" id="" title="Search" placeholder="Search here ...">
-            <!-- <button onclick="search" title="search">
-            <i class="fas fa-search"></i>
-        </button> -->
+
         </div>
         <div class="icons">
             <!-- favorite-->
@@ -80,24 +82,36 @@
     </div>
     <!-- End of Navbar-->
     <main>
-        <div class="container">
-            <div class="card">Card 1</div>
-            <div class="card">Card 2</div>
-            <div class="card">Card 3</div>
-            <div class="card">Card 4</div>
-            <div class="card">Card 5</div>
-            <div class="card">Card 6</div>
-            <div class="card">Card 7</div>
-            <div class="card">Card 8</div>
-            <div class="card">Card 9</div>
-            <div class="card">Card 10</div>
-            <div class="card">Card 11</div>
-            <div class="card">Card 12</div>
-            <div class="card">Card 13</div>
-            <div class="card">Card 14</div>
-            <div class="card">Card 15</div>
+        <div class="container" id="cardContainer">
+            <!-- <div class="card">
+                <img src="" alt="">
+                <div class="about">
+
+                    <h3 id="bookTitle"></h3>
+
+                    <h4 id="bookAuthor"></h4>
+                    <p id="bookDescription"></p>
+
+
+                    <button type="submit">Add to cart</button>
+                </div>
+            </div> -->
         </div>
     </main>
+    <footer>
+        <div class="footer-content">
+
+        </div>
+        <div class="link">
+            <h3>Quick Link</h3>
+            <ul>
+                <li> &GreaterGreater;  <a href="">Home</a></li>
+                <li>&GreaterGreater;  <a href="">Catalogue</a></li>
+                <li>&GreaterGreater;  <a href="">Reviews</a></li>
+                <li>&GreaterGreater;  <a href="">Blog</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 

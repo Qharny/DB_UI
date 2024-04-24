@@ -417,6 +417,27 @@ h2 {
 }
 
 footer{
-    height: 10vh;
-    background: var(--font-dark-color)
+    position: sticky;
+    height: 30vh;
+    background: var(--font-dark-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h3{
+        color: #fff;
+    }
+
+
+    .link{
+
+        li{
+            list-style: none;
+            color: #fff;
+
+            a{
+                margin-left: 5px;
+            }
+        }
+    }
 }
