@@ -3,10 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Select the loader container
     const loaderContainer = document.querySelector(".loader-container");
     const htmlBody = document.querySelector(".wrapper");
+    const bodyElement = document.getElementsByTagName("body")[0];
 
     // Show the loader when the DOM is fully loaded
     loaderContainer.style.display = "block";
     htmlBody.style.display = "none"
+    bodyElement.style.background = "#e5eff1"
 
     // Hide the loader once the page has fully loaded
     window.addEventListener("load", function() {
@@ -61,3 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// function to navigte to another page
+function navigateToPage() {
+    window.location.href = './assets/pages/books.html';
+}
