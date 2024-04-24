@@ -351,3 +351,72 @@ h2 {
     }
 
 }
+
+/* End of deal section */
+
+/* Team section */
+.blog{
+    height: 90vh;
+
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+
+        .cards{
+            width: 16rem;
+            height: 250px;
+            padding: 1rem;
+            border-right: 1px solid var(--font-light-color);
+            border-bottom: 1px solid var(--font-light-color);
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            transition: 0.3s ease-in-out;
+            overflow-y: hidden;
+
+            img{
+                /* width: 14rem; */
+                height: 140px;
+            }
+
+            .content{
+                display: grid;
+                place-items: center;
+                text-align: center;
+                margin: 5px 0;
+
+                h4{
+                    margin: 5px 0 10px 0;
+                }
+                p{
+                    margin: 5px 0 10px 0;
+                }
+
+                .social{
+                    display: block;
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .cards:hover{
+            .content{
+                transform: translateY(-2.7rem);
+            }
+
+            .social{
+                display: block;
+            }
+
+        }
+
+    }
+}
+
+footer{
+    height: 10vh;
+    background: var(--font-dark-color)
+}
