@@ -78,7 +78,7 @@ header {
     }
 
     input[type="search"] {
-        width: 200px;
+        width: 300px;
         height: 40px;
         position: relative;
         border: none;
@@ -154,7 +154,7 @@ header {
     z-index: 1;
     padding-left: 10rem;
 
-    * {
+    *{
         margin: 5px 0;
     }
 
@@ -306,4 +306,48 @@ h2 {
         flex-wrap: wrap;
         gap: 1.5rem;
     }
+}
+
+
+/* End of Arrival Section*/
+
+
+/* Deal seection*/
+.deals-off{
+    padding: 2rem 4rem;
+    height: 50vh;
+    background: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .content{
+            flex: 1 1 20rem;
+            h2{
+                text-align: start;
+                font-weight: 600;
+            }
+            button {
+                background: var(--primary-color);
+                border-radius: 5%;
+                color: var(--white-color);
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                width: 100px;
+                height: 30px;
+                margin-top: 10px;
+                box-shadow: 1px 1px 5px black;
+            }
+            button:hover{
+                transform: translateY(-1px);
+            }
+        }
+    }
+
 }
