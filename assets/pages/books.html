@@ -32,6 +32,10 @@
     <title>Bookshopify</title>
 
     <style>
+        .NavBar p{
+            color: #fff !important;
+            margin: 0 !important;
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -41,10 +45,39 @@
 
         .card {
             background-color: #f0f0f0;
-            height: 300px;
+            height: 300px !important;
             text-align: center;
             display: grid;
             place-items: center;
+
+
+            img{
+                height: 100px;
+            }
+            h3{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            h4{
+                font-size: 18px;
+            }
+            button{
+                background: #022e21;
+                border-radius: 5%;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                width: 100px;
+                height: 30px;
+                margin-top: 10px;
+                box-shadow: 1px 1px 5px black;
+                position: absolute;
+                bottom: 0.5rem;
+                left: 5rem;
+                margin-top: 1rem;
+
+            }
         }
     </style>
 
@@ -72,13 +105,7 @@
     </header>
     <!-- Navbar -->
     <div class="NavBar">
-        <ul>
-            <li><a href="#hero" title="home">Home</a></li>
-            <li><a href="#catalogue" title="Catalogue">Catalogue</a></li>
-            <li><a href="#arrival" title="New">New Arrival</a></li>
-            <li><a href="#" title="Reviews">Reviews</a></li>
-            <li><a href="#" title="Blog">Blogs</a></li>
-        </ul>
+        <p>GET ALL YOUR BOOKS HERE...</p>
     </div>
     <!-- End of Navbar-->
     <main>

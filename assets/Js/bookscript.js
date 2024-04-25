@@ -41,8 +41,8 @@ fetch('http://localhost:3000/api/books') // Assuming this endpoint returns JSON 
             const authorElement = document.createElement('h4');
             authorElement.textContent = book.author.name; // Assuming there's an 'author' object with a 'name' property
 
-            const descriptionElement = document.createElement('p');
-            descriptionElement.textContent = book.description;
+            // const descriptionElement = document.createElement('p');
+            // descriptionElement.textContent = book.description;
 
             const addToCartButton = document.createElement('button');
             addToCartButton.textContent = 'Add to cart';
@@ -76,7 +76,7 @@ fetch('http://localhost:3000/api/books') // Assuming this endpoint returns JSON 
             // Append elements to the about div
             about.appendChild(titleElement);
             about.appendChild(authorElement);
-            about.appendChild(descriptionElement);
+            // about.appendChild(descriptionElement);
             about.appendChild(addToCartButton);
 
             // Append image and about div to the card div
