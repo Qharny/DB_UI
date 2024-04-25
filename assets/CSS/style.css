@@ -319,6 +319,7 @@ h2 {
     background: transparent;
     background-attachment: fixed;
     background-size: cover;
+    margin-top: 5px;
 
 
     .container{
@@ -357,6 +358,29 @@ h2 {
 /* Team section */
 .blog{
     height: 90vh;
+
+    .blog-container{
+        padding: 1rem 10rem;
+        height: 40vh;
+        display: flex;
+        justify-content: space-between;
+
+        .blog-content{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: start;
+
+            h2{
+                display: flex;
+                justify-content: start;
+            }
+            h4{
+                display: flex;
+                justify-content: start;
+            }
+        }
+    }
 
 
     .container{
