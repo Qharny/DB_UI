@@ -227,6 +227,11 @@ h2 {
     place-items: center;
     transition: 0.3s ease-in-out;
 
+    img{
+        width: 150px;
+        height: 200px;
+    }
+
     button {
         display: none;
         position: absolute;
@@ -298,6 +303,7 @@ h2 {
 
 /* Arrival section */
 .arrival{
+    height: 40vh;
 
     .container{
         display: flex;
@@ -305,6 +311,7 @@ h2 {
         align-items: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+        height: -webkit-fill-available;
     }
 }
 
@@ -314,18 +321,22 @@ h2 {
 
 /* Deal seection*/
 .deals-off{
-    padding: 2rem 4rem;
-    height: 50vh;
-    background: transparent;
-    background-attachment: fixed;
-    background-size: cover;
-    margin-top: 5px;
+    /* padding: 2rem 4rem; */
+    height: 40vh;
+    background-color: #fcfcfc;
+    background: url(../images/waveeditrd.png) no-repeat;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    margin: 10px 10rem !important;
+    border-top: 1px solid var(--font-light-color);
+    border-bottom: 1px solid var(--font-light-color);
 
 
     .container{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: -webkit-fill-available;
 
         .content{
             flex: 1 1 20rem;
@@ -347,6 +358,13 @@ h2 {
             }
             button:hover{
                 transform: translateY(-1px);
+            }
+        }
+        .deal-image{
+            flex: 1 1 20rem;
+            img{
+                margin-left: 20rem;
+                cursor: pointer;
             }
         }
     }
