@@ -38,6 +38,7 @@ const fetchBooks = async () => {
       addToCartButton.type = 'submit';
       addToCartButton.addEventListener('click', async () => {
           const cartId = localStorage.getItem('cartId') || (await createCart());
+          console.log(cartId)
           addToCart(cartId, book);
       });
       about.appendChild(titleElement);
