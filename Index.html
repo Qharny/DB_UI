@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./assets/vendor/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
 
     <!-- Google fonts -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,337 +38,339 @@
     </div>
     <div class="wrapper"> -->
 
-        <header>
+    <header>
 
-            <div class="logo">
-                <i class="fas fa-book"></i>
-                BookShopify
-            </div>
-            <div class="search">
-                <input type="search" name="" id="" title="Search" placeholder="Search here ...">
-                <!-- <button onclick="search" title="search">
+        <div class="logo">
+            <i class="fas fa-book"></i>
+            BookShopify
+        </div>
+        <div class="search">
+            <input type="search" name="" id="" title="Search" placeholder="Search here ...">
+            <!-- <button onclick="search" title="search">
                 <i class="fas fa-search"></i>
             </button> -->
-            </div>
-            <div class="icons">
-                <!-- favorite-->
-                <a href="./assets/pages/favorite.html" title="favorite"><i class="fas fa-heart"></i></a>
-                <!-- cart -->
-                <a href="./assets/pages/cart.html" title="cart"><i class="fas fa-shopping-cart" ></i></a>
-                <!-- profile -->
-                <a href="./assets/pages/register.html" title="Join Us"><i class="fas fa-user"></i></a>
-            </div>
-        </header>
-        <!-- Navbar -->
-        <div class="NavBar">
-            <ul>
-                <li><a href="#hero" title="home">Home</a></li>
-                <li><a href="#catalogue" title="Catalogue">Catalogue</a></li>
-                <li><a href="#arrival" title="New">New Arrival</a></li>
-                <li><a href="#" title="Reviews">Reviews</a></li>
-                <li><a href="#blog" title="Blog">Blogs</a></li>
-            </ul>
         </div>
-        <!-- End of Navbar-->
+        <div class="icons">
+            <!-- favorite-->
+            <a href="./assets/pages/favorite.html" title="favorite"><i class="fas fa-heart"></i></a>
+            <!-- cart -->
+            <a href="./assets/pages/cart.html" title="cart"><i class="fas fa-shopping-cart"></i></a>
+            <!-- profile -->
+            <a href="./assets/pages/register.html" title="Join Us"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <!-- Navbar -->
+    <div class="NavBar">
+        <ul>
+            <li><a href="#hero" title="home">Home</a></li>
+            <li><a href="#catalogue" title="Catalogue">Catalogue</a></li>
+            <li><a href="#arrival" title="New">New Arrival</a></li>
+            <li><a href="#" title="Reviews">Reviews</a></li>
+            <li><a href="#blog" title="Blog">Blogs</a></li>
+        </ul>
+    </div>
+    <!-- End of Navbar-->
 
-        <!-- The hero Section-->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Find Your Next Book</h1>
-                <p>Discover the best books online with us and get them delivered to your door </p>
+    <!-- The hero Section-->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Find Your Next Book</h1>
+            <p>Discover the best books online with us and get them delivered to your door </p>
 
-                <button>Shop Now</button>
+            <button>Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="./assets/images/hero.jpg" alt="" srcset="">
+        </div>
+    </section>
+    <!-- End of Hero Section -->
+    <main id="main" class="main">
+        <!-- ======= Catalogue Section ======= -->
+        <section id="catalogue" class="catalogue section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Catalogue</h2>
+                </div>
+
+                <hr>
+
+                <div class="catalogue-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/harryPorter.jpg" alt="book">
+                                <h4>Harry Porter</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/handmaid.jpg" alt="book">
+                                <h4>Handmaid</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/murakami.jpg" alt="book">
+                                <h4>Murakami</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/pride.jpg" alt="book">
+                                <h4>Pride and Prejudice</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/hobbit.jpg" alt="book">
+                                <h4>Hobbit</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+                        <div class="swiper-slide">
+                            <div class="cat-item">
+                                <img src="./assets/images/books/StephenKing.jpg" alt="book">
+                                <h4>Shinning</h4>
+                                <p>₵120 <small><strike>₵200</strike></small></p>
+                                <button type="button" onclick="navigateToPage()">View all</button>
+                            </div>
+                        </div><!-- End cat item -->
+
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
             </div>
-            <div class="hero-image">
-                <img src="./assets/images/hero.jpg" alt="" srcset="">
+        </section><!-- End catalogue Section -->
+
+        <!-- ========== Arrival Section =========== -->
+        <section class="arrival" id="arrival">
+            <div class="section-title">
+                <h2>New Arrival</h2>
+            </div>
+
+            <div class="container">
+                <div class="cards">
+                    <img src="" alt="book">
+                    <div class="content">
+                        <h4>New Arrival</h4>
+                        <p>₵150.99 <small><strike>₵200</strike></small> </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="" alt="book">
+                    <div class="content">
+                        <h4>New Arrival</h4>
+                        <p>₵150.99 <small><strike>₵200</strike></small> </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="" alt="book">
+                    <div class="content">
+                        <h4>New Arrival</h4>
+                        <p>₵150.99 <small><strike>₵200</strike></small> </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="" alt="book">
+                    <div class="content">
+                        <h4>New Arrival</h4>
+                        <p>₵150.99 <small><strike>₵200</strike></small> </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="" alt="book">
+                    <div class="content">
+                        <h4>New Arrival</h4>
+                        <p>₵150.99 <small><strike>₵200</strike></small> </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- End of Hero Section -->
-        <main id="main" class="main">
-            <!-- ======= Catalogue Section ======= -->
-            <section id="catalogue" class="catalogue section-bg">
-                <div class="container" data-aos="fade-up">
+        <!-- ---- End of Arrival Section ---- -->
 
-                    <div class="section-title">
-                        <h2>Catalogue</h2>
-                    </div>
-
-                    <hr>
-
-                    <div class="catalogue-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/harryPorter.jpg" alt="book">
-                                    <h4>Harry Porter</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/handmaid.jpg" alt="book">
-                                    <h4>Handmaid</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/murakami.jpg" alt="book">
-                                    <h4>Murakami</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/pride.jpg" alt="book">
-                                    <h4>Pride and Prejudice</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/hobbit.jpg" alt="book">
-                                    <h4>Hobbit</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-                            <div class="swiper-slide">
-                                <div class="cat-item">
-                                    <img src="./assets/images/books/StephenKing.jpg" alt="book">
-                                    <h4>Shinning</h4>
-                                    <p>₵120 <small><strike>₵200</strike></small></p>
-                                    <button type="button" onclick="navigateToPage()" >View all</button>
-                                </div>
-                            </div><!-- End cat item -->
-
-
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-
+        <!--  ====== Deal section ====== -->
+        <section class="deals-off">
+            <div class="container">
+                <div class="content">
+                    <h2>Deal Of The Day</h2>
+                    <h3>Get up to 50% off</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, necessitatibus!
+                    </p>
+                    <button onclick="navigateToPage()"> Shop Now</button>
                 </div>
-            </section><!-- End catalogue Section -->
-
-            <!-- ========== Arrival Section =========== -->
-            <section class="arrival" id="arrival">
-                <div class="section-title">
-                    <h2>New Arrival</h2>
+                <div class="deal-image">
+                    <img src="./assets/images/books/deal.jpg" alt="deal off" width="250">
                 </div>
-
-                <div class="container">
-                    <div class="cards">
-                        <img src="" alt="book">
-                        <div class="content">
-                            <h4>New Arrival</h4>
-                            <p>₵150.99 <small><strike>₵200</strike></small> </p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="" alt="book">
-                        <div class="content">
-                            <h4>New Arrival</h4>
-                            <p>₵150.99 <small><strike>₵200</strike></small> </p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="" alt="book">
-                        <div class="content">
-                            <h4>New Arrival</h4>
-                            <p>₵150.99 <small><strike>₵200</strike></small> </p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="" alt="book">
-                        <div class="content">
-                            <h4>New Arrival</h4>
-                            <p>₵150.99 <small><strike>₵200</strike></small> </p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="" alt="book">
-                        <div class="content">
-                            <h4>New Arrival</h4>
-                            <p>₵150.99 <small><strike>₵200</strike></small> </p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </section>
+        <section class="blog" id="blog">
+            <div class="section-title">
+                <h2>Our Blog</h2>
+            </div>
+            <div class="blog-container">
+                <!-- write blog message -->
+                <div class="blog-content">
+                    <h2> Welcome to Bookshopify</h2>
+                    <h4>Best Online BookStore with Great Discount(%)</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi ipsam quae quisquam odit
+                        quas!
+                    </p>
                 </div>
-            </section>
-            <!-- ---- End of Arrival Section ---- -->
-
-            <!--  ====== Deal section ====== -->
-            <section class="deals-off" >
-                <div class="container">
+                <img src="" alt="book">
+            </div>
+            <div class="section-title">
+                <h2>The Team</h2>
+            </div>
+            <div class="container">
+                <!-- card to show team -->
+                <div class="cards">
+                    <img src="" alt="team">
                     <div class="content">
-                        <h2>Deal Of The Day</h2>
-                        <h3>Get up to 50% off</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, necessitatibus!
-                        </p>
-                        <button onclick="navigateToPage()"> Shop Now</button>
-                    </div>
-                    <div class="deal-image">
-                        <img src="./assets/images/books/deal.jpg" alt="deal off" width="250" >
-                    </div>
-                </div>
-            </section>
-            <section class="blog" id="blog">
-                <div class="section-title">
-                    <h2>Our Blog</h2>
-                </div>
-                <div class="blog-container">
-                    <!-- write blog message -->
-                    <div class="blog-content">
-                        <h2> Welcome to Bookshopify</h2>
-                        <h4>Best Online BookStore with Great Discount(%)</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. <br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi ipsam quae quisquam odit quas!
-                        </p>
-                    </div>
-                    <img src="" alt="book">
-                </div>
-                <div class="section-title">
-                    <h2>The Team</h2>
-                </div>
-                <div class="container">
-                    <!-- card to show team -->
-                    <div class="cards">
-                        <img src="" alt="team">
-                        <div class="content">
-                            <h4>Tracy Frema Opoku</h4>
-                            <p>Developer</p>
-                            <div class="social">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
+                        <h4>Tracy Frema Opoku</h4>
+                        <p>Developer</p>
+                        <div class="social">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
+                </div>
 
-                    <div class="cards">
-                        <img src="" alt="team">
-                        <div class="content">
-                            <h4>Emmanuel Selase</h4>
-                            <p>Developer</p>
-                            <div class="social">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <img src="" alt="team">
-                        <div class="content">
-                            <h4>Kabutey Manasseh</h4>
-                            <p>Developer</p>
-                            <div class="social">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <img src="" alt="team">
-                        <div class="content">
-                            <h4>Ankafa Clement</h4>
-                            <p>Developer</p>
-                            <div class="social">
-                                <i class="fab fa-facebook"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
+                <div class="cards">
+                    <img src="" alt="team">
+                    <div class="content">
+                        <h4>Emmanuel Selase</h4>
+                        <p>Developer</p>
+                        <div class="social">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Contact Section -->
-            <section class="contact" id="contact">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.292013073073!2d-0.186755685736
+
+                <div class="cards">
+                    <img src="" alt="team">
+                    <div class="content">
+                        <h4>Kabutey Manasseh</h4>
+                        <p>Developer</p>
+                        <div class="social">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <img src="" alt="team">
+                    <div class="content">
+                        <h4>Ankafa Clement</h4>
+                        <p>Developer</p>
+                        <div class="social">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.292013073073!2d-0.186755685736
                     9787!3d5.603716795253073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9f6b1b1b1b1%3A0x
-                    7f6b1b1b1b1b1b1!2sAccra!5e0!3m2!1sen!2sgh!4v1623150730737!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-                <div class="section-title">
-                    <h2>Contact Us</h2>
-                </div>
-                <div class="container">
-                    <div class="contact-content">
-                        <div class="contact-form">
-                            <img src="./assets/images/contact1.png" alt="">
-                            <form action="">
-                                <input type="text" name="name" id="name" placeholder="Name">
-                                <input type="email" name="email" id="email" placeholder="Email">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                <br>
-                                <button type="submit">Send</button>
-                            </form>
-                        </div>
+                    7f6b1b1b1b1b1b1!2sAccra!5e0!3m2!1sen!2sgh!4v1623150730737!5m2!1sen!2sgh" width="600" height="450"
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <img src="./assets/images/contact1.png" alt="">
+                        <form action="">
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            <br>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3>Address</h3>
-                    <p>Accra, Ghana</p>
-                    <h3>Email</h3>
-                    <p>
-                        <a href="mailto:booshopify@gmail.com">
-                            <i class="fas fa-envelope"></i>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Address</h3>
+                <p>Accra, Ghana</p>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:booshopify@gmail.com">
+                        <i class="fas fa-envelope"></i>
                         <span>booshopify@gmail.com</span>
-                        </a>
-                    </p>
-                    <h3>Phone</h3>
-                    <p>
-                        <a href="tel:+233 123 456 789">
-                            <i class="fas fa-phone"></i>
+                    </a>
+                </p>
+                <h3>Phone</h3>
+                <p>
+                    <a href="tel:+233 123 456 789">
+                        <i class="fas fa-phone"></i>
                         <span>+233 123 456 789</span>
-                        </a>
-                    </p>
-                </div>
+                    </a>
+                </p>
             </div>
-            <div class="link">
-                <h3>Quick Link</h3>
-                <ul>
-                    <li> &GreaterGreater; <a href="">Home</a></li>
-                    <li>&GreaterGreater;<a href="">Catalogue</a></li>
-                    <li>&GreaterGreater;<a href="">Reviews</a></li>
-                    <li>&GreaterGreater;<a href="">Blog</a></li>
-                </ul>
-            </div>
-        </footer>
+        </div>
+        <div class="link">
+            <h3>Quick Link</h3>
+            <ul>
+                <li> &GreaterGreater; <a href="">Home</a></li>
+                <li>&GreaterGreater;<a href="">Catalogue</a></li>
+                <li>&GreaterGreater;<a href="">Reviews</a></li>
+                <li>&GreaterGreater;<a href="">Blog</a></li>
+            </ul>
+        </div>
+    </footer>
     </div>
 
 </body>
