@@ -370,6 +370,12 @@ h2 {
     }
 
 }
+.deals-off .container {
+        display: none;
+    }
+.deals-off .container:first-child {
+        display: flex;
+    }
 
 /* End of deal section */
 

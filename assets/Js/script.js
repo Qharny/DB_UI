@@ -1,5 +1,5 @@
 // Wait for the DOM content to be fully loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Select the loader container
     const loaderContainer = document.querySelector(".loader-container");
     const htmlBody = document.querySelector(".wrapper");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     bodyElement.style.background = "#e5eff1"
 
     // Hide the loader once the page has fully loaded
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         loaderContainer.style.display = "none";
         htmlBody.style.display = "block"
     });
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // the navbar scrolling effect.
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.NavBar');
     const navbarHeight = navbar.getBoundingClientRect().height;
     const headerHeight = document.querySelector('header').getBoundingClientRect().height;
@@ -37,7 +37,7 @@ window.addEventListener('scroll', function() {
 });
 
 // the sliding effect in the catalogue section.
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.catalogue-slider', {
         speed: 600,
         loop: true,
@@ -69,3 +69,28 @@ document.addEventListener('DOMContentLoaded', function() {
 function navigateToPage() {
     window.location.href = './assets/pages/books.html';
 }
+
+// sliding function for the deal section
+let currentIndex = 0;
+const slides = document.querySelectorAll('.deals-off .container');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'flex';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+function startAutoSlide() {
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+startAutoSlide();
