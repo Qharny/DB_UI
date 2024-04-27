@@ -14,10 +14,11 @@ html, body{
     background-attachment: fixed;
     background-size: cover;
     transition: 0.3s all;
+    background-image:;
 }
 
 :root{
-    --primary-color: #022e21;
+    --primary-color: #064e01;
     --secondary-color: #df2b1b;
     --tetiary-color: #239ef0;
     --background-dark-color: #10121A;
@@ -56,10 +57,12 @@ header{
     }
     .logo i{
         color: var(--primary-color);
+        margin-left: 30px;
+       
     }
 
     input[type="search"]{
-        width: 200px;
+        width: 700px;
         height: 40px;
         position: relative;
         border: none;
@@ -79,10 +82,11 @@ header{
 
     .icons{
        i{
-        margin-left: 10px;
+        margin-left: 15px;
         color: var(--font-dark-color);
         cursor: pointer;
         transition: 0.3s ease-out;
+        align-items:end;
        }
        i:hover{
         color: var(--primary-color);
@@ -95,6 +99,7 @@ header{
     justify-content: center;
     align-items: center;
     height: 54px;
+    
 }
 .navbar li{
     display: inline;
@@ -104,6 +109,7 @@ header{
     cursor: pointer;
     color: var(--white-color);
     font-size: 18px;
+    margin-left: 30px;
 }
 .navbar ul li a:hover{
     text-decoration: underline;
