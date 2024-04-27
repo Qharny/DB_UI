@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="../css/register.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+   <script src="../Js/register.js" defer></script>
 </head>
 
 <body>
@@ -74,28 +75,7 @@
          </div>
       </div>
    </div>
-   <script>
-      // JavaScript code for form interaction
 
-      // Sliding effect between login and signup forms
-      const loginText = document.querySelector(".title-text .login");
-      const loginForm = document.querySelector("form.login");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector("form .signup-link a");
-      signupBtn.onclick = () => {
-         loginForm.style.marginLeft = "-50%";
-         loginText.style.marginLeft = "-50%";
-      };
-      loginBtn.onclick = () => {
-         loginForm.style.marginLeft = "0%";
-         loginText.style.marginLeft = "0%";
-      };
-      signupLink.onclick = () => {
-         signupBtn.click();
-         return false;
-      };
-   </script>
 </body>
 
 </html>
