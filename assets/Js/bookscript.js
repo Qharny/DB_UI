@@ -2,10 +2,10 @@ function addToCart(cartId, book) {
     console.log(cartId)
     console.log(book)
     // Fetch to add the item to the cart
-    fetch(`http://localhost:3000/api/carts/${cartId}/items`, {
+    fetch(`http://localhost:3001/api/carts/${cartId}/items`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: [{ bookId: book.id, quantity: 1 }] })
+        body: JSON.stringify({ bookId: book.id, quantity: 1 })
     })
     .then(response => response.json())
     .then(data => {
@@ -15,7 +15,7 @@ function addToCart(cartId, book) {
     .catch(error => console.error('Error adding item to cart:', error));
 }
 
-fetch('http://localhost:3000/api/books') // Assuming this endpoint returns JSON data with book information
+fetch('http://localhost:3001/api/books') // Assuming this endpoint returns JSON data with book information
     .then(response => response.json())
     .then(data => {
         // Assuming data is an array of book objects
@@ -55,7 +55,7 @@ fetch('http://localhost:3000/api/books') // Assuming this endpoint returns JSON 
                 // Check if cartId exists in localStorage
                 if (!cartId) {
                     // If cartId doesn't exist, create a new cart
-                    fetch('http://localhost:3000/api/carts', {
+                    fetch('http://localhost:3001/api/carts', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' }
                     })
