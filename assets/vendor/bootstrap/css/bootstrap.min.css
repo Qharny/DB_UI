@@ -403,17 +403,17 @@ img,
 svg {
   vertical-align: middle;
 }
-table {
+/* table {
   caption-side: bottom;
   border-collapse: collapse;
-}
+} */
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: var(--bs-secondary-color);
   text-align: left;
 }
-th {
+/* th {
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
@@ -426,7 +426,7 @@ tr {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-}
+} */
 label {
   display: inline-block;
 }
