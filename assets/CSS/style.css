@@ -52,7 +52,7 @@ body,
 /* all anchor tags */
 a {
     text-decoration: none !important;
-    color: #000 !important;
+    color: var(--font-light-color);
 }
 
 a:hover {
@@ -311,7 +311,7 @@ h2 {
 
 /* Arrival section */
 .arrival{
-    height: 40vh;
+    height: 55vh;
 
     .container{
         display: flex;
@@ -320,6 +320,21 @@ h2 {
         flex-wrap: wrap;
         gap: 1.5rem;
         height: -webkit-fill-available;
+
+        .cards{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            background: var(--font-light-color);
+            border-radius: 5px;
+        }
+    }
+    img{
+        width: 150px;
+        height: 200px
     }
 }
 
