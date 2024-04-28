@@ -58,6 +58,13 @@ a {
 a:hover {
     text-decoration: underline !important;
 }
+/* All paragraghs*/
+p{
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: var(--font-dark-color)!important;
+    margin: 0 !important;
+}
 
 /* header section */
 header {

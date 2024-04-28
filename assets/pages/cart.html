@@ -32,16 +32,18 @@
 
 :root {
     --bg: #ffffff;
-    --grn: #06a906;
+    --grn: #022e21;
     --blk: #000000;
     --dim: #e8e2e2;
 }
 
 body {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+
+    p{
+        color: var(--dim) !important;
+    }
 }
 
 header {
@@ -52,17 +54,17 @@ header {
     align-items: center;
     padding: 10px;
 
+
     .icons{
         display: flex;
         align-items: center;
     }
 }
 
-.logo {
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 10px;
+.logo{
+    color: #fff !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
 }
 
 .cart {
@@ -71,16 +73,17 @@ header {
     background-color: var(--bg);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 10px;
     font-size: 20px;
     padding: 5px;
-    align-items: center;
 }
 
 .container {
     display: flex;
     width: 100%;
     margin-bottom: 30px;
+    padding: 2rem 0 0 0;
 }
 
 #root {
@@ -138,7 +141,6 @@ header {
     </style>
 </head>
 <body>
-    <!-- <div id="cartItems"></div> Container for displaying cart items -->
     <header>
 
         <div class="logo">
@@ -146,17 +148,19 @@ header {
             BookShopify
         </div>
         <div class="search">
-            My Cart
+            <p>My Cart</p>
         </div>
         <div class="icons">
             <!-- favorite-->
-            <a href="./assets/pages/favorite.html" title="favorite"><i class="fas fa-heart"></i></a>
+            <a href="./assets/pages/favorite.html" title="favorite" >
+                <i class="fas fa-heart" style="color: #fff;"></i></a>
             <!-- cart -->
             <div class="cart">
                 <i class="fas fa-shopping-cart"></i>
-                <p id="cart-count">0</p>
+                <p id="cart-count" style="color: #000 !important;">0</p>
             </div>            <!-- profile -->
-            <a href="./assets/pages/register.html" title="Join Us"><i class="fas fa-user"></i></a>
+            <a href="./assets/pages/register.html" title="Join Us">
+                <i class="fas fa-user" style="color: #fff;"></i></a>
         </div>
     </header>
     <div class="container">
