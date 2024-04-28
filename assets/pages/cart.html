@@ -1,183 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/all.css">
-    <link rel="stylesheet" href="../CSS/_animated.scss">
-
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/all.css" />
+    <link rel="stylesheet" href="../CSS/_animated.scss" />
 
     <!-- JavaScript Files -->
     <script src="../Js/all.js"></script>
     <script src="../Js/script.js" defer></script>
 
-
     <!-- Vendor CSS Files -->
     <script src="../vendor/swiper/swiper-bundle.min.js" defer></script>
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="../vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <title>BookShopify</title>
 
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    font-family: "outfits", sans-serif;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        font-family: "outfits", sans-serif;
+      }
 
-:root {
-    --bg: #ffffff;
-    --grn: #022e21;
-    --blk: #000000;
-    --dim: #e8e2e2;
-}
+      :root {
+        --bg: #ffffff;
+        --grn: #022e21;
+        --blk: #000000;
+        --dim: #e8e2e2;
+      }
 
-body {
-    display: flex;
-    flex-direction: column;
+      body {
+        display: flex;
+        flex-direction: column;
+        background-attachment: fixed;
 
-    p{
-        color: var(--dim) !important;
-    }
-}
+        p {
+          color: var(--dim) !important;
+        }
+      }
 
-header {
-    width: 100%;
-    background-color: var(--grn);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+      header {
+        width: 100%;
+        background-color: var(--grn);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
 
+        .icons {
+          display: flex;
+          align-items: center;
+        }
+      }
 
-    .icons{
+      .logo {
+        color: #fff !important;
+        font-size: 30px !important;
+        font-weight: bold !important;
+      }
+
+      .cart {
+        width: 70px;
+        height: 30px;
+        background-color: var(--bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 10px;
+        font-size: 20px;
+        padding: 5px;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 2rem 0 0 0;
+      }
+
+      #root {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      .sidebar {
+        width: 40%;
+        border-radius: 5px;
+        background-color: var(--dim);
+        margin-left: 20px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .head {
+        background-color: var(--grn);
+        display: flex;
+        padding: 5px;
+        align-items: center;
+      }
+      button {
+        background: var(--primary-color);
+        border-radius: 5%;
+        color: var(--white-color);
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        width: 100px;
+        height: 30px;
+        margin-top: 10px;
+        box-shadow: 0 1px 5px black;
+      }
+
+      #items {
+        padding: 15px;
+      }
+
+      .foot {
+        border-top: 2px solid var(--blk);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--grn);
+        padding: 10px;
+        border-radius: 3px;
+      }
+
+      .img-box {
+        width: 100%;
+        height: 180px;
         display: flex;
         align-items: center;
-    }
-}
-
-.logo{
-    color: #fff !important;
-    font-size: 30px !important;
-    font-weight: bold !important;
-}
-
-.cart {
-    width: 70px;
-    height: 30px;
-    background-color: var(--bg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 10px;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 2rem 0 0 0;
-}
-
-#root {
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.sidebar {
-    width: 40%;
-    border-radius: 5px;
-    background-color: var(--dim);
-    margin-left: 20px;
-    padding: 15px;
-    text-align: center;
-}
-
-.head {
-    background-color: var(--grn);
-    display: flex;
-    padding: 5px;
-    align-items: center;
-
-}
-
-#items {
-    padding: 15px;
-}
-
-.foot {
-    border-top: 2px solid var(--blk);
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid var(--grn);
-    padding: 10px;
-    border-radius: 3px;
-}
-
-.img-box {
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        justify-content: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-
-        <div class="logo">
-            <i class="fas fa-book"></i>
-            BookShopify
+      <div class="logo">
+        <i class="fas fa-book"></i>
+        BookShopify
+      </div>
+      <div class="search">
+        <p>My Cart</p>
+      </div>
+      <div class="icons">
+        <!-- favorite-->
+        <a href="./assets/pages/favorite.html" title="favorite">
+          <i class="fas fa-heart" style="color: #fff"></i
+        ></a>
+        <!-- cart -->
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <p id="cart-count" style="color: #000 !important">0</p>
         </div>
-        <div class="search">
-            <p>My Cart</p>
-        </div>
-        <div class="icons">
-            <!-- favorite-->
-            <a href="./assets/pages/favorite.html" title="favorite" >
-                <i class="fas fa-heart" style="color: #fff;"></i></a>
-            <!-- cart -->
-            <div class="cart">
-                <i class="fas fa-shopping-cart"></i>
-                <p id="cart-count" style="color: #000 !important;">0</p>
-            </div>            <!-- profile -->
-            <a href="./assets/pages/register.html" title="Join Us">
-                <i class="fas fa-user" style="color: #fff;"></i></a>
-        </div>
+        <!-- profile -->
+        <a href="./assets/pages/register.html" title="Join Us">
+          <i class="fas fa-user" style="color: #fff"></i
+        ></a>
+      </div>
     </header>
     <div class="container">
-        <div id="root"></div>
-        <div class="sidebar">
-            <div class="head">
-                <p>My Cart</p>
-            </div>
-            <div id="cart-items">Your cart is empty</div>
-            <div class="foot">
-                <h3>Total</h3>
-                <div id="cart-total">¢ 0.00</div>
-            </div>
+      <div id="root"></div>
+      <div class="sidebar">
+        <div class="head">
+          <p>My Cart</p>
         </div>
+        <div id="cart-items">Your cart is empty</div>
+        <div class="foot">
+          <h3>Total</h3>
+          <div id="cart-total">¢ 0.00</div>
+        </div>
+      </div>
     </div>
 
-    <script src="../Js/cart.js"></script> <!-- Link to your JavaScript file -->
     <script src="../Js/cart.js"></script>
-</body>
+    <!-- Link to your JavaScript file -->
+    <script src="../Js/cart.js"></script>
+  </body>
 </html>
