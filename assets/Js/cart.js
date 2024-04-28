@@ -1,50 +1,85 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const cartItemsContainer = document.getElementById('cartItems');
+const products = [
+    {
+        id: 0,
+        image: '/items/1.jpg',
+        title: 'No.1',
+        price: 150,
+    },
+    {
+        id: 1,
+        image: '/items/2.jpg',
+        title: 'No.2',
+        price: 10,
+    },
+    {
+        id: 2,
+        image: '/items/3.jpg',
+        title: 'No.3',
+        price: 100,
+    },
+    {
+        id: 3,
+        image: '/items/4.jpg',
+        title: 'No.4',
+        price: 250,
+    }
+];
 
-//     // Retrieve cart ID from localStorage
-//     const cartId = localStorage.getItem('cartId');
+let cart = [];
 
-//     if (cartId) {
-//         // Fetch cart items from the server
-//         fetch(`http://localhost:3000/api/carts/${cartId}/items`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 // Display cart items
-//                 displayCartItems(data);
-//             })
-//             .catch(error => console.error('Error fetching cart items:', error));
-//     } else {
-//         // If cart ID doesn't exist, display a message indicating an empty cart
-//         cartItemsContainer.textContent = "Your cart is empty.";
-//     }
+function addtocart(productId) {
+    const productToAdd = products[productId];
+    cart.push(productToAdd);
+    updateCartUI();
+}
 
-//     function displayCartItems(items) {
-//         if (items.length === 0) {
-//             cartItemsContainer.textContent = "Your cart is empty.";
-//         } else {
-//             // Clear previous cart items
-//             cartItemsContainer.innerHTML = '';
+function deleteFromCart(productId) {
+    cart.splice(productId, 1);
+    updateCartUI();
+}
 
-//             // Loop through cart items and display them
-//             items.forEach(item => {
-//                 const cartItem = document.createElement('div');
-//                 cartItem.classList.add('cart-item');
+function calculateTotal() {
+    let total = 0;
+    cart.forEach((item) => {
+        total += item.price;
+    });
+    return total;
+}
 
-//                 const titleElement = document.createElement('h3');
-//                 titleElement.textContent = item.book.title;
+function updateCartUI() {
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.length;
 
-//                 const authorElement = document.createElement('h4');
-//                 authorElement.textContent = item.book.author;
+    const cartItems = document.getElementById('cart-items');
+    if (cart.length === 0) {
+        cartItems.textContent = 'Your cart is empty';
+    } else {
+        cartItems.innerHTML = '';
+        cart.forEach((item, index) => {
+            cartItems.innerHTML += `
+                <div>${item.title} - ¢${item.price}.00
+                    <button onclick="deleteFromCart(${index})">Remove</button>
+                </div>`;
+        });
+    }
 
-//                 const quantityElement = document.createElement('span');
-//                 quantityElement.textContent = `Quantity: ${item.quantity}`;
+    const totalElement = document.getElementById('cart-total');
+    const total = calculateTotal();
+    totalElement.textContent = `¢ ${total}.00`;
+}
 
-//                 cartItem.appendChild(titleElement);
-//                 cartItem.appendChild(authorElement);
-//                 cartItem.appendChild(quantityElement);
 
-//                 cartItemsContainer.appendChild(cartItem);
-//             });
-//         }
-//     }
-// });
+document.getElementById('root').innerHTML = products.map((item, i) => {
+    return `
+        <div class="box">
+            <div class="img-box">
+                <img class="images" src="${item.image}" alt="${item.title}">
+            </div>
+            <div class="bottom">
+                <p>${item.title}</p>
+                <h2>¢ ${item.price}.00</h2>
+                <button onclick="addtocart(${i})">Add to cart</button>
+            </div>
+        </div>
+    `;
+}).join('');
