@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,18 +65,36 @@
                <div class="field">
                   <input type="password" id="password" placeholder="Password" id="password" required />
                </div>
-               <div class="field">
-                  <input type="password" id="confirm-password" placeholder="Confirm password" id="confirm-password" required />
-               </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" id="signup" value="Signup" id="btn" onclick="matchpassword()">
+                  <input type="submit" id="signup" value="Signup" id="btn">
                </div>
             </form><!-- End of Signup form -->
          </div>
       </div>
    </div>
 
+   <script>
+      // Sliding effect between login and signup forms
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = () => {
+         loginForm.style.marginLeft = "-50%";
+         loginText.style.marginLeft = "-50%";
+      };
+      loginBtn.onclick = () => {
+         loginForm.style.marginLeft = "0%";
+         loginText.style.marginLeft = "0%";
+      };
+      signupLink.onclick = () => {
+         signupBtn.click();
+         return false;
+      };
+
+   </script>
 </body>
 
 </html>
