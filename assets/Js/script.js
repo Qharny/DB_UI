@@ -94,3 +94,24 @@ function startAutoSlide() {
 }
 
 startAutoSlide();
+
+
+const usericon = document.querySelector('.icons');
+const greet = document.querySelector('.greetUser');
+const greetMe = document.querySelector('#greetings');
+
+// function to greet user
+function greetUser() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+        usericon.style.display = 'none';
+        greet.style.display = 'block';
+        greetMe.innerHTML = `Hello, ${user.name}`;
+    }
+    else{
+        usericon.style.display = 'block';
+        greet.style.display = 'none';
+    }
+}
+
+greetUser();
