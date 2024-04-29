@@ -107,6 +107,12 @@ header {
     }
 
     .icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--font-dark-color);
+
+
         i {
             margin-left: 10px;
             color: var(--font-dark-color);

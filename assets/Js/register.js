@@ -1,5 +1,3 @@
-const loginBtn = document.getElementById('login');
-const signupBtn = document.getElementById('signup');
 
 // Function to create user
 const createUser = async (userDetails) => {
@@ -11,6 +9,24 @@ const createUser = async (userDetails) => {
        });
        const data = await response.json();
        console.log('UserData', data)
+       localStorage.setItem('username', data.username);
+       return data;
+   } catch (error) {
+       console.error('Error creating user:', error);
+       return null;
+   }
+};
+
+const loginUser = async (userDetails) => {
+   try {
+       const response = await fetch('http://localhost:3001/api/login', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify(userDetails)
+       });
+       const data = await response.json();
+       console.log('UserData', data)
+       localStorage.setItem('username', data.username);
        return data;
    } catch (error) {
        console.error('Error creating user:', error);
@@ -25,7 +41,6 @@ function isValidEmail(email) {
    return emailRegex.test(email);
 }
 
-// Function to match passwords
 
 // Function to handle form submission
 function handleSubmit(event) {
@@ -41,33 +56,34 @@ function handleSubmit(event) {
    const password = form.querySelector('#password')?.value;
 
    // Check email validity
-   if (!isValidEmail(email)) {
+   if (email?.length > 0 && !isValidEmail(email)) {
       // If email is not valid, log an error message
       alert('Please enter a valid email address');
       console.error('Please enter a valid email address');
       return;
    }
 
-   // Create an object with the information
-   const userInfo = {
-      name: fullname,
-      username: username,
-      email: email,
-      password: password
-   };
+   if (username && password && !email && !fullname) {
+      const loginInfo = {
+         username: username,
+         password: password
+      }
 
-   // Convert the object to JSON string
-   // const jsonUserInfo = JSON.stringify(userInfo, null, 2); // The null and 2 are for pretty formatting
+      loginUser(loginInfo)
+   } else if (fullname && username && email && password) {
+      const userInfo = {
+         name: fullname,
+         username: username,
+         email: email,
+         password: password
+      }
 
-   // Display the JSON string
-   // console.log(jsonUserInfo);
+      createUser(userInfo)
 
-   // Call the createUser function
-   const user = createUser(userInfo);
-   console.log('User', user);
+   }
+   window.location = '../../index.html';
 
-   // You can submit the form to the server here if needed
-   // form.submit();
+
 }
 
 // Add event listener to each form for form submission
