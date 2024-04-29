@@ -10,6 +10,7 @@ const createUser = async (userDetails) => {
        const data = await response.json();
        console.log('UserData', data)
        localStorage.setItem('username', data.username);
+       window.location = '../../index.html';
        return data;
    } catch (error) {
        console.error('Error creating user:', error);
@@ -18,6 +19,7 @@ const createUser = async (userDetails) => {
 };
 
 const loginUser = async (userDetails) => {
+   console.log('loggin in')
    try {
        const response = await fetch('http://localhost:3001/api/login', {
            method: 'POST',
@@ -25,9 +27,11 @@ const loginUser = async (userDetails) => {
            body: JSON.stringify(userDetails)
        });
        const data = await response.json();
-       console.log('UserData', data)
+       console.log('loginData', data)
        localStorage.setItem('username', data.username);
+       window.location = '../../index.html';
        return data;
+       
    } catch (error) {
        console.error('Error creating user:', error);
        return null;
@@ -81,7 +85,6 @@ function handleSubmit(event) {
       createUser(userInfo)
 
    }
-   window.location = '../../index.html';
 
 
 }

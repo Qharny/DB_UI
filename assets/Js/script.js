@@ -114,16 +114,21 @@ function greetUser() {
         logoutButton.classList.add('logout');
         logoutButton.innerHTML = '<i class="fas fa-sign-out-alt"></i>';
         usericonContainer.appendChild(logoutButton);
+        logoutButton.addEventListener('click', () => {
+            localStorage.removeItem('username');
+            window.location.href = './assets/pages/register.html';
+        });
 
     }
 }
 
 greetUser();
 
-function logout() {
-    const logoutButton = document.querySelector('.logout');
-    logoutButton.addEventListener('click', () => {
-        localStorage.removeItem('username');
-        window.location.href = './index.html';
-    });
-}
+// function logout() {
+//     const logoutButton = document.querySelector('.logout');
+//     logoutButton.addEventListener('click', () => {
+//         localStorage.removeItem('username');
+//         window.location.href = './index.html';
+//     });
+// }
+// logout()
