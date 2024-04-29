@@ -1,21 +1,22 @@
 // Wait for the DOM content to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    // Select the loader container
-    const loaderContainer = document.querySelector(".loader-container");
-    const htmlBody = document.querySelector(".wrapper");
-    const bodyElement = document.getElementsByTagName("body")[0];
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Select the loader container
+//     const loaderContainer = document.querySelector(".loader-container");
+//     const htmlBody = document.querySelector(".wrapper");
+//     const bodyElement = document.getElementsByTagName("body")[0];
 
-    // Show the loader when the DOM is fully loaded
-    loaderContainer.style.display = "block";
-    htmlBody.style.display = "none"
-    bodyElement.style.background = "#e5eff1"
+//     // Show the loader when the DOM is fully loaded
+//     loaderContainer.style.display = "block";
+//     htmlBody.style.display = "none"
+//     bodyElement.style.background = "#e5eff1"
 
-    // Hide the loader once the page has fully loaded
-    window.addEventListener("load", function () {
-        loaderContainer.style.display = "none";
-        htmlBody.style.display = "block"
-    });
-});
+//     // Hide the loader once the page has fully loaded
+//     window.addEventListener("load", function () {
+//         loaderContainer.style.display = "none";
+//         htmlBody.style.display = "block"
+//     });
+// });
+
 
 
 // the navbar scrolling effect.
@@ -96,22 +97,33 @@ function startAutoSlide() {
 startAutoSlide();
 
 
-const usericon = document.querySelector('.icons');
+const usericonContainer = document.getElementById('icons');
 const greet = document.querySelector('.greetUser');
 const greetMe = document.querySelector('#greetings');
 
 // function to greet user
 function greetUser() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (user) {
-        usericon.style.display = 'none';
-        greet.style.display = 'block';
-        greetMe.innerHTML = `Hello, ${user.name}`;
-    }
-    else{
-        usericon.style.display = 'block';
-        greet.style.display = 'none';
+    const username = localStorage.getItem('username');
+    if (username) {
+        const text = `Hello, ${username}`
+        const textNode = document.createTextNode(text);
+        usericonContainer.appendChild(textNode);
+
+        // create a logout button
+        const logoutButton = document.createElement('div');
+        logoutButton.classList.add('logout');
+        logoutButton.innerHTML = '<i class="fas fa-sign-out-alt"></i>';
+        usericonContainer.appendChild(logoutButton);
+
     }
 }
 
 greetUser();
+
+function logout() {
+    const logoutButton = document.querySelector('.logout');
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('username');
+        window.location.href = './index.html';
+    });
+}
